@@ -3,36 +3,63 @@ function negate(a) {
 }
 
 function both(a, b) {
-  // your code here
-};
+  if (a === true && b === true) {
+    return true;
+  }
+  return false;
+}
 
 function either(a, b) {
-  // your code here
-};
+  if (a === true || b === true) {
+    return true;
+  }
+  return false;
+}
 
 function none(a, b) {
-  // your code here
-};
+  if (a === false && b === false) {
+    return true;
+  }
+  return false;
+}
 
 function one(a, b) {
-  // your code here
-};
+  if (a === true && b === false) {
+    return true;
+  }
+  if (a === false && b === true) {
+    return true;
+  }
+  return false;
+}
 
 function truthiness(a) {
-  // your code here
-};
+  if (a === 0 || a === '' || Number.isNaN(a) || a === undefined || a === null) {
+    return false;
+  }
+  return true;
+}
 
 function isEqual(a, b) {
-  // your code here
-};
+  if (a === b) {
+    return true;
+  }
+  return false;
+}
 
 function isGreaterThan(a, b) {
-  // your code here
-};
+  if (a > b) {
+    return true;
+  }
+  return false;
+}
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+  if (a <= b) {
+    return true;
+  }
+  return false;
+}
 
 function isOdd(a) {
   // your code here
