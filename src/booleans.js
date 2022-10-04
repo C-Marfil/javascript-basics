@@ -76,8 +76,8 @@ function isEven(a) {
 }
 
 function isSquare(a) {
-  let i = Math.sqrt(a);
-  let rest = i * i;
+  const i = Math.sqrt(a);
+  const rest = i * i;
 
   if (rest === a) {
     return true;
