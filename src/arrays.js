@@ -23,15 +23,16 @@ const getNthElement = (index, array) => {
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString(array);
 };
 
 const csvStringToArray = string => {
-  // your code here
+  const array = string.split(',');
+  return array;
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  return array.push(element);
 };
 
 const addToArray2 = (element, array) => {

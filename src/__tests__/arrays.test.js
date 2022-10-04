@@ -32,21 +32,21 @@ describe('getNthElement', () => {
 });
 
 describe('arrayToCSVString', () => {
-  xit('returns the array elements as a comma-seperated string', () => {
+  it('returns the array elements as a comma-seperated string', () => {
     expect(arrayToCSVString(['a', 'b', 'c', 'd'])).toEqual('a,b,c,d');
     expect(arrayToCSVString([1, 2, 3, 4, 5])).toEqual('1,2,3,4,5');
   });
 });
 
 describe('csvStringToArray', () => {
-  xit('converts the csv string as an array', () => {
+  it('converts the csv string as an array', () => {
     expect(csvStringToArray('a,b,c,d')).toEqual(['a', 'b', 'c', 'd']);
     expect(csvStringToArray('1,2,3,4,5')).toEqual(['1', '2', '3', '4', '5']);
   });
 });
 
 describe('addToArray', () => {
-  xit('adds the item to the end of the array', () => {
+  it('adds the item to the end of the array', () => {
     const array = [];
     const array2 = [1, 2, 3];
 
@@ -59,7 +59,7 @@ describe('addToArray', () => {
 });
 
 describe('addToArray2', () => {
-  xit('returns a new array with the value appended', () => {
+  Xit('returns a new array with the value appended', () => {
     const array = ['a', 'b', 'c'];
     const array2 = [1, 2, 3];
 
