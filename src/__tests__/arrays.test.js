@@ -59,7 +59,7 @@ describe('addToArray', () => {
 });
 
 describe('addToArray2', () => {
-  Xit('returns a new array with the value appended', () => {
+  it('returns a new array with the value appended', () => {
     const array = ['a', 'b', 'c'];
     const array2 = [1, 2, 3];
 
@@ -72,7 +72,7 @@ describe('addToArray2', () => {
 });
 
 describe('removeNthElement', () => {
-  xit('removes the element at position n', () => {
+  it('removes the element at position n', () => {
     const array = ['ant', 'bison', 'cockerel', 'duck', 'elephant'];
     removeNthElement(2, array);
     expect(array).toEqual(['ant', 'bison', 'duck', 'elephant']);
@@ -84,14 +84,14 @@ describe('removeNthElement', () => {
 });
 
 describe('numbersToStrings', () => {
-  xit('converts every number in the array to a string', () => {
+  it('converts every number in the array to a string', () => {
     expect(numbersToStrings([1, 2, 3])).toEqual(['1', '2', '3']);
     expect(numbersToStrings([7, 8, 9])).toEqual(['7', '8', '9']);
   });
 });
 
 describe('uppercaseWordsInArray', () => {
-  xit('makes every string in the array uppercase', () => {
+  it('makes every string in the array uppercase', () => {
     expect(uppercaseWordsInArray(['cat', 'mouse', 'banana'])).toEqual([
       'CAT',
       'MOUSE',
@@ -106,7 +106,7 @@ describe('uppercaseWordsInArray', () => {
 });
 
 describe('reverseWordsInArray', () => {
-  xit('reverses every string in an array', () => {
+  it('reverses every string in an array', () => {
     expect(reverseWordsInArray(['cat', 'Mouse', 'banana'])).toEqual([
       'tac',
       'esuoM',

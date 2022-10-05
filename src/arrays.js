@@ -1,25 +1,5 @@
-// I did not manage to solve this one properly. I had played for a bit with for loops but I did //
-// not manage to reset 'i' back to 0 and restart the for loop.
-// This one solves part 1 of the second half of the problem:
-//
-// {
-//   if (index < array.length) {
-//     return array[index];
-//   }
-//   for (let i = 0; index >= array.length; i += 1) {
-//     return array[i];
-//   }
-//   return array[index];
-// };
-
 const getNthElement = (index, array) => {
-  if (index === array.length) {
-    return array[0];
-  }
-  if (index > array.length) {
-    return array[1];
-  }
-  return array[index];
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
@@ -31,28 +11,35 @@ const csvStringToArray = string => {
   return array;
 };
 
+
 const addToArray = (element, array) => {
-  return array.push(element);
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = [...array, element];
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
-};
+  return numbers.map(String);
+}
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(upc => {
+    return upc.toUpperCase();
+  });
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const reversedString = "";
+  for (i = strings.length - 1; i >= 0; i--) {
+    strings[i] = reversedString + strings[i];
+  } return reversedString;
 };
 
 const onlyEven = numbers => {
