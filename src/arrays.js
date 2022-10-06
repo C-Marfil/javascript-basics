@@ -36,34 +36,59 @@ const uppercaseWordsInArray = strings => {
 };
 
 const reverseWordsInArray = strings => {
-  const reversedString = "";
-  for (i = strings.length - 1; i >= 0; i--) {
-    strings[i] = reversedString + strings[i];
-  } return reversedString;
+  return strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
-  // your code here
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 !== 0) {
+      numbers.splice(i, 1);
+    }
+  }
+  return numbers;
 };
 
+
 const removeNthElement2 = (index, array) => {
-  // your code here
+  let a2 = [...array];
+  a2.splice(index, 1);
+  return a2;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = /^[aeiou]/gi;
+  const filtering = strings.filter(result => vowels.test(result));
+  return filtering;
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((a, b) => a + b);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  for (let i = 0; i < strings.length; i++) {
+    strings[i] = strings[i]
+      .split('')
+      .reverse()
+      .join('');
+ }
+  strings.sort();
+  for (let i = 0; i < strings.length; i++) {
+    strings[i] = strings[i]
+      .split('')
+      .reverse()
+      .join('');
+ }
+ return strings;
 };
 
 module.exports = {
