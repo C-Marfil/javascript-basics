@@ -1,61 +1,94 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString(array);
 };
 
 const csvStringToArray = string => {
-  // your code here
+  const array = string.split(',');
+  return array;
 };
 
+
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = [...array, element];
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
-};
+  return numbers.map(String);
+}
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(upc => {
+    return upc.toUpperCase();
+  });
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
-  // your code here
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 !== 0) {
+      numbers.splice(i, 1);
+    }
+  }
+  return numbers;
 };
 
+
 const removeNthElement2 = (index, array) => {
-  // your code here
+  let a2 = [...array];
+  a2.splice(index, 1);
+  return a2;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = /^[aeiou]/gi;
+  const filtering = strings.filter(result => vowels.test(result));
+  return filtering;
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((a, b) => a + b);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  for (let i = 0; i < strings.length; i++) {
+    strings[i] = strings[i]
+      .split('')
+      .reverse()
+      .join('');
+ }
+  strings.sort();
+  for (let i = 0; i < strings.length; i++) {
+    strings[i] = strings[i]
+      .split('')
+      .reverse()
+      .join('');
+ }
+ return strings;
 };
 
 module.exports = {

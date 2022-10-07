@@ -62,27 +62,48 @@ function isLessThanOrEqualTo(a, b) {
 }
 
 function isOdd(a) {
-  // your code here
-};
+  if (a % 2 !== 0) {
+    return true;
+  }
+  return false;
+}
 
 function isEven(a) {
-  // your code here
-};
+  if (a % 2 === 0) {
+    return true;
+  }
+  return false;
+}
 
 function isSquare(a) {
-  // your code here
-};
+  const i = Math.sqrt(a);
+  const rest = i * i;
+
+  if (rest === a) {
+    return true;
+}
+  return false;
+}
 
 function startsWith(char, string) {
-  // your code here
-};
+  if (char === string.charAt(0)) {
+    return true;
+  }
+  return false;
+}
 
 function containsVowels(string) {
-  // your code here
-};
+  if (string.match(/[aeiou]/gi)) {
+    return true;
+  }
+  return false;
+}
 
 function isLowerCase(string) {
-  // your code here
+  if (string.match(/[A-Z]/g)) {
+    return false;
+  }
+  return true;
 };
 
 module.exports = {
